@@ -1,3 +1,5 @@
+package projectGame;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -14,7 +16,8 @@ public class image extends JPanel{
 	public image(ImageIcon a) {
 		img = new JLabel(a);
 		add(img);
-		}
+	}
+	
 	public void paint(Graphics g) {
 		super.paint(g);
 		  // 동그라미 색깔 빨강으로 표시

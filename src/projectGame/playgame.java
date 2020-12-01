@@ -1,9 +1,11 @@
+package projectGame;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
 
-public class Game extends JFrame {	
+public class playgame extends JFrame {	
 	private ImageIcon []animal = { 
 			new ImageIcon("images/sea1.jpg"),
 			new ImageIcon("images/sea2.jpg"),
@@ -19,19 +21,17 @@ public class Game extends JFrame {
 	final image b = new image(Cicon1);
 	//틀린 좌표값과 범위
 	static int[] X = {17,250,110,128,185};
-	static int[] Y = {193,298,43,103,68};
+	static int[] Y = {193,298,50,103,68};
 	static final int range = 15;
 	
-	public Game() {
-		  super("환경보호 틀린그림찾기");
+	public playgame() {
+
 		  MyMouseAdapter cma = new MyMouseAdapter ();
 		  a.addMouseListener(cma);
 		  b.addMouseListener(cma);
 		 
 		  add(a, BorderLayout.WEST);
 		  add(b, BorderLayout.EAST);
-		 
-
 		  setDefaultCloseOperation(EXIT_ON_CLOSE);
 		  setBounds(300, 300, 700, 350);
 		  setVisible(true);
@@ -76,11 +76,10 @@ public class Game extends JFrame {
 		    b.repaint();
 		    
 		   }
-		   // 틀린부분을 다 찾으면 메세지 출력
-		   
+		
+		   //클리어
 		   if (image.locate1 == true && image.locate2 == true && image.locate3 == true && image.locate4 == true && image.locate5 == true) {
-		    JOptionPane.showMessageDialog(null, "축하합니다.");
-		    //다 완료하면 다시 시작을 위해 동그라미 갱신
+		    JOptionPane.showMessageDialog(null, "축하드립니다!!");
 		    image.locate1 = false;
 		    image.locate2 = false;
 		    image.locate3 = false;
@@ -88,10 +87,7 @@ public class Game extends JFrame {
 		    image.locate5 = false;
 		    a.repaint();
 		    b.repaint();
-		   }// if end
+		   }
 		  }// mouseReleased()
 		 }
-	public static void main(String[] args) {
-		new Game();
-	}
 }
