@@ -6,10 +6,8 @@ import javax.swing.*;
 
 public class GUI extends JFrame {
 	private InStage isp= new InStage();
-	private Menu m = new Menu();
 	private JMenuBar mb = new JMenuBar();
 	private GUI mainFrame = this;
-	private playgame pg;
 
 	
 	public GUI() {
@@ -55,13 +53,5 @@ public class GUI extends JFrame {
 	    setJMenuBar(mb);
 	    setVisible(true);
 	    }
-	class BackgroundPicture extends JPanel {
-		private ImageIcon icon = new ImageIcon("images/main.jpg");
-		private Image img = icon.getImage();
 
-		public void paintComponent(Graphics g) {
-			super.paintComponent(g);
-		    g.drawImage(img, 20, 20, null);
-		    }
-		}
 }

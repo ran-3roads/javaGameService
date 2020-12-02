@@ -15,7 +15,7 @@ public class InStage extends JPanel{
 	public InStage() {
 		setLayout(null);
 		
-		label = new JLabel("위기의 동물 틀린그림찾기");
+		label = new JLabel("환경보호 틀린그림찾기");
 	    label.setLocation(100, 100);
 	    label.setSize(500, 50);
 	    label.setFont(new Font("Ariel", Font.BOLD, 40));
@@ -34,7 +34,6 @@ public class InStage extends JPanel{
 	    button1.setContentAreaFilled(false);
 	    button1.setBorderPainted(false);
 	    button1.setFocusPainted(false);
-	    button1.setBackground(Color.GRAY);
 	    button1.addMouseListener(new MouseAdapter() {
 	    	public void mouseEntered(MouseEvent e) {
 	    		button1.setBorderPainted(true);
